@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque.controller.NewEmpruntController">
+   <children>
+      <SplitPane dividerPositions="0.22560975609756098" orientation="VERTICAL" prefHeight="345.0" prefWidth="600.0" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="598.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="29.0" prefWidth="606.0" text="Emprunt d'un document" textAlignment="CENTER" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0">
+                     <font>
+                        <Font name="LMRoman9-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="16.0" layoutY="29.0" prefHeight="29.0" prefWidth="574.0" text="Veuillez remplir les champs suivants :" textAlignment="CENTER" textFill="#d74f4f" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0">
+                     <font>
+                        <Font name="DejaVu Sans ExtraLight" size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="233.0" prefWidth="598.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="13.0" prefHeight="29.0" prefWidth="145.0" text="Utilisateur emprunteur" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="442.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="56.0" prefHeight="29.0" prefWidth="121.0" text="Titre du document" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="466.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="100.0" prefHeight="29.0" prefWidth="121.0" text="Date de l'emprunt" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="466.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="date_emprunt" layoutX="200.0" layoutY="98.0" prefHeight="32.0" prefWidth="293.0" promptText="Veuillez sélectionner" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="105.0" />
+                  <Label layoutX="11.0" layoutY="137.0" prefHeight="29.0" prefWidth="106.0" text="Date de retour">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton defaultButton="true" layoutX="470.0" layoutY="208.0" onAction="#actionEmprunt" prefHeight="32.0" prefWidth="114.0" text="Valider" textFill="#452df5" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXDatePicker fx:id="date_retour" layoutX="200.0" layoutY="135.0" prefHeight="32.0" prefWidth="293.0" promptText="Veuillez sélectionner" />
+                  <ComboBox fx:id="combobox_user" layoutX="203.0" layoutY="11.0" prefHeight="32.0" prefWidth="249.0" promptText="Veuillez sélectionner" />
+                  <ComboBox fx:id="combobox_titre" layoutX="204.0" layoutY="55.0" prefHeight="32.0" prefWidth="249.0" promptText="Veuillez sélectionner" />
+                  <JFXButton cancelButton="true" layoutX="15.0" layoutY="208.0" onAction="#cancel" prefHeight="32.0" prefWidth="114.0" text="Annuler" textFill="#452df5">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque.controller.NewUserController">
+   <children>
+      <SplitPane dividerPositions="0.1658291457286432" layoutX="112.0" layoutY="60.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="598.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="29.0" prefWidth="606.0" text="Enregistrer un nouvel utilisateur" textAlignment="CENTER">
+                     <font>
+                        <Font name="LMRoman9-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="16.0" layoutY="29.0" prefHeight="29.0" prefWidth="574.0" text="Veuillez remplir les champs suivants :" textAlignment="CENTER" textFill="#d74f4f" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0">
+                     <font>
+                        <Font name="DejaVu Sans ExtraLight" size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="598.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="13.0" prefHeight="29.0" prefWidth="55.0" text="Nom" AnchorPane.bottomAnchor="286.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="532.0" AnchorPane.topAnchor="13.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="50.0" prefHeight="29.0" prefWidth="55.0" text="Prénoms" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="532.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="162.0" prefHeight="29.0" prefWidth="55.0" text="Adresse" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="532.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="129.0" prefHeight="29.0" prefWidth="55.0" text="Sexe" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="532.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="87.0" prefHeight="29.0" prefWidth="173.0" text="Date de naissance" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="414.0">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="birthdat" layoutX="182.0" layoutY="85.0" prefHeight="32.0" prefWidth="300.0" promptText="Veuillez choisir" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="116.0" />
+                  <JFXTextField fx:id="edittext_nom" layoutX="182.0" layoutY="11.0" maxWidth="300.0" minWidth="300.0" prefHeight="32.0" prefWidth="300.0" promptText="Nom de famille" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="116.0" />
+                  <JFXTextField fx:id="edittext_prenom" layoutX="182.0" layoutY="48.0" maxWidth="300.0" minWidth="300.0" prefHeight="32.0" prefWidth="300.0" promptText="Prénom(s)" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="116.0" />
+                  <JFXTextField fx:id="edittext_address" layoutX="182.0" layoutY="160.0" maxWidth="300.0" minWidth="300.0" prefHeight="32.0" prefWidth="300.0" promptText="Ville, Pays" />
+                  <JFXRadioButton fx:id="radiobutton_h" layoutX="170.0" layoutY="127.0" prefHeight="32.0" prefWidth="121.0" text="Homme" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="307.0" />
+                  <JFXRadioButton fx:id="radiobutton_f" layoutX="299.0" layoutY="127.0" prefHeight="32.0" prefWidth="121.0" text="Femme" />
+                  <Label layoutX="11.0" layoutY="199.0" prefHeight="29.0" prefWidth="73.0" text="Profession">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="236.0" prefHeight="29.0" prefWidth="73.0" text="Téléphone">
+                     <font>
+                        <Font name="Lato Heavy Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="edittext_metier" layoutX="181.0" layoutY="197.0" maxWidth="300.0" minWidth="300.0" prefHeight="32.0" prefWidth="300.0" promptText="Métier" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="116.0" />
+                  <JFXTextField fx:id="edittext_tel" layoutX="180.0" layoutY="234.0" maxWidth="300.0" minWidth="300.0" prefHeight="32.0" prefWidth="300.0" promptText="N° téléphone" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="116.0" />
+                  <JFXButton defaultButton="true" layoutX="474.0" layoutY="282.0" onAction="#newUser" prefHeight="32.0" prefWidth="114.0" text="Valider" textFill="#452df5" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="474.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton cancelButton="true" layoutX="14.0" layoutY="282.0" onAction="#cancel" prefHeight="32.0" prefWidth="114.0" text="Annuler" textFill="#452df5" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="470.0">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

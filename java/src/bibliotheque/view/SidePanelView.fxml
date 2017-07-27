@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque.controller.SidePanelController">
+   <children>
+      <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../css/back.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" onAction="#catalogue" prefHeight="45.0" prefWidth="99.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Catalogue" />
+      <JFXButton buttonType="RAISED" onAction="#users" prefHeight="45.0" prefWidth="99.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Abonnés" />
+      <JFXButton buttonType="RAISED" onAction="#emprunts" prefHeight="45.0" prefWidth="99.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Emprunts" />
+      <JFXButton buttonType="RAISED" onAction="#about" prefHeight="45.0" prefWidth="99.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="À Propos" />
+      <JFXButton buttonType="RAISED" onAction="#exit" prefHeight="45.0" prefWidth="99.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Quitter" />
+   </children>
+</VBox>

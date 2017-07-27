@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque.controller.CatalogueController">
+   <children>
+      <SplitPane dividerPositions="0.24623115577889448" layoutX="62.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="95.0" prefWidth="598.0">
+               <children>
+                  <MenuBar layoutX="15.0" layoutY="42.0" prefHeight="35.0" prefWidth="101.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="482.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Affichage">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#allDocument" text="Tous les documents" />
+                          <MenuItem mnemonicParsing="false" onAction="#availableDocument" text="Documents disponibles" />
+                              <MenuItem mnemonicParsing="false" onAction="#barrowDocument" text="Documents empruntés" />
+                              <MenuItem mnemonicParsing="false" onAction="#showBooks" text="Liste des livres" />
+                              <MenuItem mnemonicParsing="false" onAction="#showMemoires" text="Liste des mémoires" />
+                              <MenuItem mnemonicParsing="false" onAction="#showDVD" text="Liste des DVD de documentaires" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="35.0" prefWidth="550.0" text="Catalogue de la bibliothèque" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="48.0">
+                     <font>
+                        <Font name="LMRoman9-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <JFXButton defaultButton="true" layoutX="141.0" layoutY="43.0" onAction="#addDocument" prefHeight="35.0" prefWidth="207.0" text="Ajouter un document" textFill="#452df5">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton defaultButton="true" layoutX="379.0" layoutY="43.0" onAction="#deleteDocument" prefHeight="35.0" prefWidth="207.0" text="Retirer un document" textFill="#452df5">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="365.0" stylesheets="@../css/catalogue.css">
+               <children>
+                  <TableView fx:id="table_doc" layoutX="1.0" layoutY="7.0" prefHeight="315.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="doc_titre" prefWidth="75.0" text="Titre" />
+                      <TableColumn fx:id="doc_auteur" prefWidth="75.0" text="Auteur" />
+                        <TableColumn fx:id="doc_edition" prefWidth="75.0" text="Edition" />
+                        <TableColumn fx:id="doc_type" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="doc_etat" prefWidth="75.0" text="Etat" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

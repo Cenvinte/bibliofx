@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CasUtilisationAdmin">
+  <ClassDiagramComponents>
+    <Class name="Document" package="" visibility="public" xPosition="696.0" yPosition="320.0">
+      <Fields>
+        <Field name="titre" type="String" visibility="private"/>
+        <Field name="auteur" type="String" visibility="private"/>
+        <Field name="edition" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Bibliotheque" package="" visibility="public" xPosition="651.0" yPosition="12.0">
+      <Methods>
+        <Method name="ajouterAdherent" returnType="void" visibility="public"/>
+        <Method name="supprimerAdherent" returnType="void" visibility="public"/>
+        <Method name="ajouterDocument" returnType="void" visibility="public"/>
+        <Method name="supprimerDocument" returnType="void" visibility="public"/>
+        <Method name="emprunter" returnType="void" visibility="public"/>
+        <Method name="reintegrerEmprunt" returnType="void" visibility="public"/>
+        <Method name="consulterAbonnes" returnType="void" visibility="public"/>
+        <Method name="consulterDocuments" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Adherent" package="" visibility="public" xPosition="330.0" yPosition="12.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="prenom" type="String" visibility="private"/>
+        <Field name="annee_naissance" type="Date" visibility="private"/>
+        <Field name="sexe" type="String" visibility="private"/>
+        <Field name="profession" type="String" visibility="private"/>
+        <Field name="adresse" type="String" visibility="private"/>
+        <Field name="telephone" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="emprunterDocument" returnType="void" visibility="public"/>
+        <Method name="reintegrerDocument" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Livre" package="" visibility="public" xPosition="684.0" yPosition="542.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mémoire" package="" visibility="public" xPosition="510.0" yPosition="542.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="DVD de documentaire" package="" visibility="public" xPosition="854.0" yPosition="542.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Emprunte" package="" visibility="public" xPosition="330.0" yPosition="320.0">
+      <Fields>
+        <Field name="date_emprunt" type="Date" visibility="private"/>
+        <Field name="date_retour" type="Date" visibility="private"/>
+        <Field name="emprunteur" type="String" visibility="private"/>
+        <Field name="oeuvre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Ajouter" source="Document" target="Bibliotheque" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="" source="Livre" target="Document"/>
+    <UseRelation name="" source="Emprunte" target="Document" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Emprunter" source="Adherent" target="Bibliotheque" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="" source="Mémoire" target="Document"/>
+    <IsRelation name="" source="DVD de documentaire" target="Document"/>
+    <HasRelation name="Emprunter" source="Document" target="Bibliotheque" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="S'inscrire" source="Adherent" target="Bibliotheque" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <UseRelation name="" source="Document" target="Adherent" sourceCardinality="0..*" targetCardinality="1..1"/>
+    <UseRelation name="" source="Adherent" target="Emprunte" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

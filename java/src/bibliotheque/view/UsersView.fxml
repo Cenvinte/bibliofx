@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque.controller.UsersController">
+   <children>
+      <SplitPane dividerPositions="0.24120603015075376" layoutX="169.0" layoutY="24.0" orientation="VERTICAL" prefHeight="424.0" prefWidth="769.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="598.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="598.0" text="Liste des abonnés de la bibliothèque" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="LMRoman9-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <MenuBar layoutX="14.0" layoutY="43.0" prefHeight="35.0" prefWidth="102.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="482.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Affichage">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#listAll" text="Liste de tous les utilisateurs" />
+                          <MenuItem mnemonicParsing="false" onAction="#listeHomme" text="Liste des hommes" />
+                              <MenuItem mnemonicParsing="false" onAction="#listeFemme" text="Liste des femmes" />
+                              <MenuItem mnemonicParsing="false" onAction="#listePretes" text="Liste des emprunteurs" />
+                              <MenuItem mnemonicParsing="false" onAction="#listeNonPretes" text="Liste des non emprunteurs" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <JFXButton defaultButton="true" layoutX="126.0" layoutY="43.0" onAction="#addUser" prefHeight="35.0" prefWidth="227.0" text="Ajouter un utilisateur" textFill="#452df5">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton defaultButton="true" layoutX="364.0" layoutY="43.0" onAction="#deleteUser" prefHeight="35.0" prefWidth="227.0" text="Retirer un utilisateur" textFill="#452df5">
+                     <font>
+                        <Font name="Bitstream Vera Sans Mono Bold Oblique" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="598.0">
+               <children>
+                  <TableView fx:id="table_users" layoutX="-1.0" layoutY="-1.0" prefHeight="322.0" prefWidth="598.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                     <columns>
+                        <TableColumn fx:id="user_lastname" prefWidth="75.0" text="Nom" />
+                        <TableColumn fx:id="user_firstname" prefWidth="75.0" text="Prénoms" />
+                        <TableColumn fx:id="user_borndat" prefWidth="75.0" text="Naissance" />
+                        <TableColumn fx:id="user_sex" prefWidth="75.0" text="Sexe" />
+                        <TableColumn fx:id="user_address" prefWidth="75.0" text="Adresse" />
+                        <TableColumn fx:id="user_profession" prefWidth="75.0" text="Profession" />
+                        <TableColumn fx:id="user_telephone" prefWidth="75.0" text="Téléphone" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
